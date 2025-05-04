@@ -1,0 +1,118 @@
+/* Base reset & dark background */
+body {
+    margin: 0;
+    padding: 20px;
+    background-color: #000;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #e0e0e0;
+    text-align: center;
+  }
+  
+  /* Header section */
+  header {
+    background-color: #0a0a0a;
+    padding: 20px 0;
+    border-bottom: 2px solid #00ff94;
+    box-shadow: 0 4px 20px rgba(0, 255, 148, 0.2);
+    margin-bottom: 40px;
+  }
+  
+  /* Flex container for logo + title */
+  .header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  /* Logo image */
+  .logo {
+    width: 80px;
+    height: auto;
+    object-fit: contain;
+    cursor: pointer;
+    border-radius: 8px;
+  }
+  
+  /* Title with glow + gradient */
+  #logo {
+    font-size: 2.5rem;
+    font-weight: bold;
+    background: linear-gradient(90deg, #00bfff, #00ff94);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: glow 3s ease-in-out infinite;
+  }
+  
+  /* Optional glow animation for logo text */
+  @keyframes glow {
+    0%   { text-shadow: 0 0 5px #00ff94; }
+    50%  { text-shadow: 0 0 15px #00bfff; }
+    100% { text-shadow: 0 0 5px #00ff94; }
+  }
+  
+  /* Table styling */
+  table {
+    width: 95%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: #0d0d0d;
+    border: 2px solid #00ff94;
+    border-radius: 12px;
+    box-shadow: 0 0 10px #00ff94;
+    overflow: hidden;
+  }
+  
+  /* Table head style */
+  thead {
+    background: linear-gradient(90deg, #00bfff, #00ff94);
+  }
+  
+  /* Column headers */
+  th {
+    padding: 14px;
+    color: #000;
+    font-weight: bold;
+    font-size: 16px;
+  }
+  
+  /* Table body cells */
+  td {
+    padding: 12px;
+    border: 1px solid #1a1a1a;
+    font-size: 15px;
+    color: #e0e0e0;
+  }
+  
+  /* Zebra striping */
+  tbody tr:nth-child(even) {
+    background-color: #111;
+  }
+  
+  /* Hover effect */
+  tbody tr:hover {
+    background-color: #1a1a1a;
+    transition: 0.2s ease-in-out;
+  }
+  .update-button-container {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  #update-btn {
+    background-color: #1d428a;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  #update-btn:hover {
+    background-color: #2e5aa8;
+  }
+  
+  

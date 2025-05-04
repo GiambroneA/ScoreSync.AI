@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Premier League Table</title>
+</head>
+<body>
+
+    <header> 
+        
+        <div class="header-content">
+            <img src="assets/logo.png" alt="ScoreSync Logo" class="logo">
+            <h1 id="logo">ScoreSync<span class="ai">.AI</span></h1>
+          </div>
+    </header>
+
+    <div class="update-button-container">
+        <button onclick="updateStandingsFromAI()" id="update-btn">🔄 Update Standings from OpenAI</button>
+      </div>
+      
+
+    <table>  <!-- creating the  premier league table -->
+        <thead>
+          <tr>   <!-- creating each row in the table -->
+            <th>#</th>  <!-- th tags creating headers for the row, these are each of the table's headers horizontally -->
+            <th>Team</th> 
+            <th>W</th>
+            <th>D</th>
+            <th>L</th>
+            <th>GF</th>
+            <th>GA</th>
+            <th>G</th>
+            <th>Pts</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td id="team1">--</td> <!-- Row to start displaying teams, there will be 20 of these to fill each team's position on the table -->
+            <td id="w1">--</td>  <!-- For now just implenting -- as data inside cell, these tags ("w1") will be called in backend to store data from AI -->
+            <td id="d1">--</td>
+            <td id="l1">--</td>
+            <td id="gf1">--</td>
+            <td id="ga1">--</td>
+            <td id="gd1">--</td>
+            <td id="pts1">--</td>
+          </tr>
+          
+          <tr>
+            <td>2</td>
+            <td id="team2">--</td>
+            <td id="w2">--</td>
+            <td id="d2">--</td>
+            <td id="l2">--</td>
+            <td id="gf2">--</td>
+            <td id="ga2">--</td>
+            <td id="gd2">--</td>
+            <td id="pts2">--</td>
+          </tr>
+        
+            
+          <tr>
+            <td>3</td>
+        <td id="team3">--</td>
+        <td id="w3">--</td>
+        <td id="d3">--</td>
+        <td id="l3">--</td>
+        <td id="gf3">--</td>
+        <td id="ga3">--</td>
+        <td id="gd3">--</td>
+        <td id="pts3">--</td> 
+        </tr>
+           
+        <tr> 
+            <td>4</td>
+          <td id="team4">--</td>
+          <td id="w4">--</td>
+          <td id="d4">--</td>
+          <td id="l4">--</td>
+          <td id="gf4">--</td>
+          <td id="ga4">--</td>
+          <td id="gd4">--</td>
+          <td id="pts4">--</td>
+        </tr>
+              
+        
+        <tr> 
+        <td>5</td>
+        <td id="team5">--</td>
+        <td id="w5">--</td>
+        <td id="d5">--</td>
+        <td id="l5">--</td>
+        <td id="gf5">--</td>
+        <td id="ga5">--</td>
+        <td id="gd5">--</td>
+        <td id="pts5">--</td>    
+        </tr>
+
+        <tr>
+        <td>6</td>
+        <td id="team6">--</td>
+        <td id="w6">--</td>
+        <td id="d6">--</td>
+        <td id="l6">--</td>
+        <td id="gf6">--</td>
+        <td id="ga6">--</td>
+        <td id="gd6">--</td>
+        <td id="pts6">--</td>    
+        </tr>
+
+        <tr> 
+        <td>7</td>
+        <td id="team7">--</td>
+        <td id="w7">--</td>
+        <td id="d7">--</td>
+        <td id="l7">--</td>
+        <td id="gf7">--</td>
+        <td id="ga7">--</td>
+        <td id="gd7">--</td>
+        <td id="pts7">--</td>    
+        </tr>
+
+        <tr>
+        <td>8</td>
+        <td id="team8">--</td>
+        <td id="w8">--</td>
+        <td id="d8">--</td>
+        <td id="l8">--</td>
+        <td id="gf8">--</td>
+        <td id="ga8">--</td>
+        <td id="gd8">--</td>
+        <td id="pts8">--</td>    
+        </tr>
+
+        <tr>
+        <td>9</td>
+        <td id="team9">--</td>
+        <td id="w9">--</td>
+        <td id="d9">--</td>
+        <td id="l9">--</td>
+        <td id="gf9">--</td>
+        <td id="ga9">--</td>
+        <td id="gd9">--</td>
+        <td id="pts9">--</td>    
+        </tr>
+
+        <tr>
+        <td>10</td>
+        <td id="team10">--</td>
+        <td id="w10">--</td>
+        <td id="d10">--</td>
+        <td id="l10">--</td>
+        <td id="gf10">--</td>
+        <td id="ga10">--</td>
+        <td id="gd10">--</td>
+        <td id="pts10">--</td>    
+        </tr>
+
+        <tr>
+        <td>11</td>
+        <td id="team11">--</td>
+        <td id="w11">--</td>
+        <td id="d11">--</td>
+        <td id="l11">--</td>
+        <td id="gf11">--</td>
+        <td id="ga11">--</td>
+        <td id="gd11">--</td>
+        <td id="pts11">--</td>    
+        </tr>
+
+        
+        <tr>
+        <td>12</td>
+        <td id="team12">--</td>
+        <td id="w12">--</td>
+        <td id="d12">--</td>
+        <td id="l12">--</td>
+        <td id="gf12">--</td>
+        <td id="ga12">--</td>
+        <td id="gd12">--</td>
+        <td id="pts12">--</td>    
+        </tr>
+
+        <tr>
+        <td>13</td>
+        <td id="team13">--</td>
+        <td id="w13">--</td>
+        <td id="d13">--</td>
+        <td id="l13">--</td>
+        <td id="gf13">--</td>
+        <td id="ga13">--</td>
+        <td id="gd13">--</td>
+        <td id="pts13">--</td>    
+        </tr>
+
+        <tr>
+        <td>14</td>
+        <td id="team14">--</td>
+        <td id="w14">--</td>
+        <td id="d14">--</td>
+        <td id="l14">--</td>
+        <td id="gf14">--</td>
+        <td id="ga14">--</td>
+        <td id="gd14">--</td>
+        <td id="pts14">--</td>    
+        </tr>
+
+        <tr>
+        <td>15</td>
+        <td id="team15">--</td>
+        <td id="w15">--</td>
+        <td id="d15">--</td>
+        <td id="l15">--</td>
+        <td id="gf15">--</td>
+        <td id="ga15">--</td>
+        <td id="gd15">--</td>
+        <td id="pts15">--</td>    
+        </tr>
+
+        <tr>
+        <td>16</td>
+        <td id="team16">--</td>
+        <td id="w16">--</td>
+        <td id="d16">--</td>
+        <td id="l16">--</td>
+        <td id="gf16">--</td>
+        <td id="ga16">--</td>
+        <td id="gd16">--</td>
+        <td id="pts16">--</td>    
+        </tr>
+
+        <tr>
+        <td>17</td>
+        <td id="team17">--</td>
+        <td id="w17">--</td>
+        <td id="d17">--</td>
+        <td id="l17">--</td>
+        <td id="gf17">--</td>
+        <td id="ga17">--</td>
+        <td id="gd17">--</td>
+        <td id="pts17">--</td>    
+        </tr>
+
+        <tr>
+        <td>18</td>
+        <td id="team18">--</td>
+        <td id="w18">--</td>
+        <td id="d18">--</td>
+        <td id="l18">--</td>
+        <td id="gf18">--</td>
+        <td id="ga18">--</td>
+        <td id="gd18">--</td>
+        <td id="pts18">--</td>    
+        </tr>
+
+        <tr>
+        <td>19</td>
+        <td id="team19">--</td>
+        <td id="w19">--</td>
+        <td id="d19">--</td>
+        <td id="l19">--</td>
+        <td id="gf19">--</td>
+        <td id="ga19">--</td>
+        <td id="gd19">--</td>
+        <td id="pts19">--</td>    
+        </tr>
+
+        <tr>
+        <td>20</td>
+        <td id="team20">--</td>
+        <td id="w20">--</td>
+        <td id="d20">--</td>
+        <td id="l20">--</td>
+        <td id="gf20">--</td>
+        <td id="ga20">--</td>
+        <td id="gd20">--</td>
+        <td id="pts20">--</td>    
+        </tr>
+
+        </tbody>
+      </table>
+
+
+      <!-- JavaScript to auto-update the table every 10 minutes -->
+      <script>
+        const API_HOST = "http://localhost:5071"; // Keep this port correct!
+      
+        async function loadStandings() {
+          try {
+            const res = await fetch(`${API_HOST}/api/standings`);
+            const data = await res.json();
+      
+            data.sort((a, b) => b.points - a.points); // Sort by points
+      
+            data.forEach((team, index) => {
+              const i = index + 1;
+              document.getElementById(`team${i}`).textContent = team.name;
+              document.getElementById(`w${i}`).textContent = team.wins;
+              document.getElementById(`d${i}`).textContent = team.draws;
+              document.getElementById(`l${i}`).textContent = team.losses;
+              document.getElementById(`gf${i}`).textContent = team.goalsFor;
+              document.getElementById(`ga${i}`).textContent = team.goalsAgainst;
+              document.getElementById(`gd${i}`).textContent = team.goalDifference;
+              document.getElementById(`pts${i}`).textContent = team.points;
+            });
+          } catch (err) {
+            console.error("Failed to load standings:", err);
+          }
+        }
+      
+        async function updateStandingsFromAI() {
+  try {
+    const prompt = "Update the Premier League standings based on the most recent matchday."; // 🧠 Your custom prompt
+
+    const res = await fetch(`${API_HOST}/api/openai/standings`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ Result: prompt }) // 🛠 This is what your controller is expecting
+    });
+
+    if (res.ok) {
+      console.log("✅ Standings updated from OpenAI.");
+      await loadStandings();
+    } else {
+      console.error("❌ Update failed.");
+    }
+  } catch (err) {
+    console.error("❌ Error calling update:", err);
+  }
+}
+      
+        // Make sure this is called once on page load
+        window.onload = loadStandings;
+      </script>
+      
+      
+        
+      
+      
+  
+    
+</body>
+</html>
+  

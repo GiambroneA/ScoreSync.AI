@@ -1,0 +1,6 @@
+@ScoreSyncBackend_HostAddress = http://localhost:5071
+
+GET {{ScoreSyncBackend_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "ExVdBhf65UESvvbLf6rFsZQrya+vQePr7fUSwzFp6LE=",
+  "Source": "ScoreSyncBackend",
+  "BasePath": "_content/ScoreSyncBackend",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
